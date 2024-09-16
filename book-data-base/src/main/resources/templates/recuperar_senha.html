@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stilo_esqueceuSenha.css">
+    <link rel="shortcut icon" href="../imgs/logo_bdb.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/stilo_esqueceuSenha.css">
+    <link rel="shortcut icon" href="imgs/logo_bdb.png" type="image/x-icon">
+    <title>Recuperar Senha</title>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="logo">
+            <img src="../imgs/logo_bdb.png" alt="logo" width="90px">
+        </div>
+        <div>
+            <a th:href="@{/Login}" class="voltar_button">VOLTAR</a>
+        </div>
+    </div>
+
+    <div class="caixa-recuperar">
+        <div class="form-header">
+            <h3 class="recuperar-senha">RECUPERAR SENHA</h3>
+        </div>
+
+        <form id="loginForm" class="form" th:method="get" th:action="@{/changepassword}">
+            <input type="text" placeholder="email" class="input-email">
+            <p class="textinho">Por favor, se você não receber o e-mail dentro de alguns minutos, verifique sua pasta de
+                spam ou entre em contato conosco para obter assistência adicional. </p>
+            <a th:href="@{/changepassword}" class="enviar-botao">ENVIAR</a>
+        </form>
+    </div>
+
+</body>
+
+</html>
